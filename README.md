@@ -1,6 +1,7 @@
 # Text Stroke Web Component
 
 Adds a text stroke to some text.
+Demo: https://holmesbryant.github.io/text-stroke/
 
 ### Attributes
 

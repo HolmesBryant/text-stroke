@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Text Stroke Web Component</title>
+  <script defer type="module" src="text-stroke.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <p>
+    <details>
+      <summary><h1>Text Stroke Web Component</h1></summary>
+      <p>
+        Adds a text stroke to some text.
+      </p>
+      <div>
+        <h3>Attributes</h3>
+        <ul>
+          <li><b>strokecolor</b> optional (default: inherit) The color of the stroke.</li>
+          <li><b>strokewidth</b> optional (default: 2px) The width of the stroke.</li>
+        </ul>
+      </div>
+
+      <h2>Note:</h2>
+      <p>The text must be wrapped inside an HTML element (h1, p, span etc). If it is not, it will automatically be wrapped in an h1 element.</p>
+
+      <div>
+        <h3>Usage</h3>
+          <code>
+            &lt;script type="module" src="text-stroke.js"&gt;&lt;/script&gt;<br>
+            &lt;text-stroke&gt;Some Text to Stroke&lt;/text-stroke&gt;
+          </code>
+      </div>
+    </details>
+  </p>
+
+  <fieldset>
+    <legend>Available Attributes</legend>
+
+    <label>
+      strokecolor<br>
+      <select onchange="change(event, 'strokecolor')">
+        <option value="silver">Default (silver)</option>
+        <option>orange</option>
+        <option>#ff5f00</option>
+        <option>hsl(89.75, 100%, 50%)</option>
+        <option>rgba(0, 161.77, 255, 0.5)</option>
+        <option>oklch(0.52642 0.29298 292.73)</option>
+      </select>
+    </label>
+
+    <label>
+      strokewidth<br>
+      <select onchange="change(event, 'strokewidth')">
+        <option value="2px">Default (2px)</option>
+        <option>1px</option>
+        <option>1.25em</option>
+        <option>1.5rem</option>
+      </select>
+    </label>
+
+  <button onclick="location.reload(false)">Reset</button>
+  </fieldset>
+
+  <div id="container">
+    <text-stroke>
+      Some Text to Stroke
+    </text-stroke>
+  </div>
+
+  <script>
+    function change(evt, attr) {
+      const el = document.querySelector('text-stroke');
+      el.setAttribute(attr, evt.target.value);
+    }
+  </script>
+</body>
+</html>

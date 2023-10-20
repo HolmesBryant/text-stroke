@@ -1,0 +1,61 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: rgb(245,245,245);
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+details > * {
+  background: white;
+  border-radius: 20px;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+fieldset {
+  border: 1px solid silver;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+
+h1 {
+  display: inline-block;
+  margin: 0;
+}
+
+
+input, select {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+label {
+  display: inline-block;
+  margin: 5px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+summary { cursor: pointer; }
+
+text-stroke h1 {
+  font-size: 3rem;
+}
+
+#container {
+  align-items: center;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display:flex;
+  justify-content: center;
+  padding: 1rem;
+}

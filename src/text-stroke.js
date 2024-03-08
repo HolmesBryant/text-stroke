@@ -1,7 +1,7 @@
 /**
  *  Renders a stroke around some text
  *
- *  @author Holmes Bryant <webbmaastaa@gmail.com>
+ *  @author Holmes Bryant <https://github.com/HolmesBryant>
  *  @license GPL-3.0
  *
  *  @attribute [strokecolor] optional (default: "silver") The color of the stroke.

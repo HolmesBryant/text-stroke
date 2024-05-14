@@ -102,7 +102,6 @@ export class TextStroke extends HTMLElement {
 		if (!value) value = 'inherit';
 		this.#strokecolor = value;
 		this.update(this.strokewidth);
-		// console.log('color', this.#strokecolor);
 	}
 
 	get strokewidth() { return this.#strokewidth; }
@@ -110,9 +109,15 @@ export class TextStroke extends HTMLElement {
 		if (!value) value = '2px';
 		this.#strokewidth = value;
 		this.update(value);
-		// console.log('width', this.#strokewidth);
 	}
 
 }
 
-document.addEventListener('DOMContentLoaded', customElements.define('text-stroke', TextStroke));
+document.addEventListener('DOMContentLoaded', () => {
+	if (!customElements.get('text-stroke')) {
+		customElements.define('text-stroke', TextStroke);
+	}
+});
+
+
+
